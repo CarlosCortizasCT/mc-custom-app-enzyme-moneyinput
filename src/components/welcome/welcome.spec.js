@@ -1,14 +1,15 @@
 import Welcome from './welcome';
 import { IntlProvider } from 'react-intl';
-import { render } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('<Welcome />', () => {
   it('renders MoneyInput', () => {
-    const view = render(
+    const view = mount(
       <IntlProvider locale="en">
         <Welcome />
       </IntlProvider>
     );
-    expect(view.find('#money-input-1.amount')).not.toBe(undefined);
+
+    expect(view.find('MoneyInput').exists()).toBe(true);
   });
 });

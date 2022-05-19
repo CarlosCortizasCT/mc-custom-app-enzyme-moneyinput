@@ -4,7 +4,7 @@ const applyJestPresetWithEnzyme = require('@commercetools-frontend/jest-preset-m
 
 module.exports = {
   ...applyJestPresetWithEnzyme({
-    enzymeAdapterVersion: 16,
+    enzymeAdapterVersion: 17,
     jestPreset,
   }),
 };
